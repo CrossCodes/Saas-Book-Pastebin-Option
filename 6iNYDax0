@@ -1,0 +1,6 @@
+#http://pastebin.com/6iNYDax0
+
+new_collection = collection.map do |elt|
+  2 * elt
+end
+
