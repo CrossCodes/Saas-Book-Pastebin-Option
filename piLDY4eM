@@ -1,0 +1,7 @@
+#http://pastebin.com/piLDY4eM
+
+Myrottenpotatoes::Application.routes.draw do
+  resources :movies
+  root :to => redirect('/movies')
+end
+
