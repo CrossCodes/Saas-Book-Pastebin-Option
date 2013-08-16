@@ -1,0 +1,4 @@
+#http://pastebin.com/DMuMijw0
+
+"Catch 22" =~ /\w+\s+\d+/
+/\w+\s+\d+/ =~ "Catch 22"
