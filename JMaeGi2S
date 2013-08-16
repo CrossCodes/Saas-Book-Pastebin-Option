@@ -1,0 +1,5 @@
+#http://pastebin.com/JMaeGi2S
+
+FibSequence.new(3).each do
+  print "Rah"
+end
