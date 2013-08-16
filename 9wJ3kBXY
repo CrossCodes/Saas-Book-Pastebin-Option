@@ -1,0 +1,13 @@
+#http://pastebin.com/9wJ3kBXY
+
+# return every n´th element in an enumerable
+module Enumerable
+  def every_nth(count)
+    index = 0
+    self.each do |elt|
+      yield elt if index % count == 0
+      index += 1
+    end
+  end
+end
+
