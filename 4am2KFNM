@@ -1,0 +1,5 @@
+#http://pastebin.com/4am2KFNM
+
+Time.now.at_beginning_of_year + 1.day
+# => 2011-01-02 00:00:00 -0800
+
