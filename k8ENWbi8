@@ -1,0 +1,7 @@
+#http://pastebin.com/k8ENWbi8
+
+movies.each do |m|
+    separator = ’=>’  # first assignment is inside a block!
+    puts "#{m.title} #{separator} #{m.rating}"   #  OK
+end
+  puts "Separator is #{separator}"     # === FAILS!! ===
