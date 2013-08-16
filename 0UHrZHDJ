@@ -1,0 +1,6 @@
+#http://pastebin.com/0UHrZHDJ
+
+def trivial_method # no arguments; can also
+  x = 5
+end
+
