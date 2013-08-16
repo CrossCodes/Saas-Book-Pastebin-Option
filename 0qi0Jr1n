@@ -1,0 +1,9 @@
+#http://pastebin.com/0qi0Jr1n
+
+include Enumerable
+%w(alice bob carol).each_with_index do |person,index|
+  puts ">> #{person} is number #{index}"
+end
+>> alice is number 0
+>> bob is number 1
+>> carol is number 2
