@@ -1,0 +1,16 @@
+#http://pastebin.com/iXes5WSd
+
+def make_page(contents)
+  page = ''
+  page << make_header()
+  page << contents
+  page << make_footer()
+end
+#
+def one_page
+  make_page("Hello")
+end
+def another_page
+  make_page("World")
+end
+
