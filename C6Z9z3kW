@@ -1,0 +1,5 @@
+#http://pastebin.com/C6Z9z3kW
+
+link_to('Edit', {:controller => 'students', :action => 'edit'})
+link_to 'Edit', :controler => 'students', :action => 'edit'
+
