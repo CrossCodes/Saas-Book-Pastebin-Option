@@ -1,0 +1,14 @@
+#http://pastebin.com/2CJRu4DY
+
+def make_page
+  make_header << yield << make_footer
+end
+
+def one_page
+  make_page { "Hello" }
+end
+
+def another_page
+  make_page { "World" }
+end
+
