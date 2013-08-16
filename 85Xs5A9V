@@ -1,0 +1,4 @@
+#http://pastebin.com/85Xs5A9V
+
+time_regex = /^\d\d?:\d\d\s*[ap]m$/i
+
