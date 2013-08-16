@@ -1,0 +1,5 @@
+#http://pastebin.com/ib56Dv0y
+
+x = "8:25 PM"
+x =~ /(\d\d?):(\d\d)\s*([ap])m$/i
+
