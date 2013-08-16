@@ -1,0 +1,6 @@
+#http://pastebin.com/v1YDjnBB
+
+# assumes 1 Euro=1.3 US dollars, 1 Yen=0.012 US dollars
+5.dollars.in(:euros)  # => 6.5
+(1.euro - 50.yen).in(:dollars)  # => 0.700
+ 
