@@ -1,0 +1,6 @@
+#http://pastebin.com/xS1g6Sqy
+
+lastfib = "Surprise!"
+FibSequence.new(3).each do |f|
+  print lastfib
+end
