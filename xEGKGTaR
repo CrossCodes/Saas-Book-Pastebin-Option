@@ -1,0 +1,9 @@
+#http://pastebin.com/xEGKGTaR
+
+# downcase and split are defined in String class
+  words = IO.read("file").
+    split(/\W+/).
+    select { |s| s =~ /^[aeiou]/i }.
+    map { |s| s.downcase }.
+    uniq.
+    sort
