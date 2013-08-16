@@ -1,0 +1,3 @@
+#http://pastebin.com/WFHRA8Ap
+
+new_collection = collection.map { |elt| 2 * elt }
