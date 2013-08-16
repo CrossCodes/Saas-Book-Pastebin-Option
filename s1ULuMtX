@@ -1,0 +1,7 @@
+#http://pastebin.com/s1ULuMtX
+
+separator = ´=>´
+movies.each do |m|
+  puts "#{m.title} #{separator} #{m.rating}"
+end
+
