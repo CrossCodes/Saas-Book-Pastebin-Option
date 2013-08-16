@@ -1,0 +1,12 @@
+#http://pastebin.com/mTkpBR1t
+
+class Fixnum
+    def method_missing(method_id, *args)
+      name = method_id.to_s
+      if name =~ /^(second|minute|hour)$/
+        self.send(name + ’s’)
+      else
+        super # pass the buck to superclass
+      end
+    end
+  end
