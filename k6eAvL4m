@@ -1,0 +1,12 @@
+#http://pastebin.com/k6eAvL4m
+
+>>  Time.parse("10:47 pm").humanize
+# => "About a quarter til eleven"
+>>  Time.parse("10:31 pm").humanize
+# => "About half past ten"
+>>  Time.parse("10:07 pm").humanize
+# => "About ten"
+>>  Time.parse("23:58").humanize
+# => "About midnight"
+>>  Time.parse("00:29").humanize
+# => "About 12:30"
