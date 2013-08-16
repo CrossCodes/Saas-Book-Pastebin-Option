@@ -1,0 +1,16 @@
+#http://pastebin.com/uHbAXejk
+
+def one_page
+  page = ''
+  page << make_header()
+  page << "Hello"
+  page << make_footer()
+end
+def another_page
+  page = ''
+  page << make:header()
+  page << "World"
+  page << make_footer()
+end
+
+ 
