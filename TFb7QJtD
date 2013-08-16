@@ -1,0 +1,10 @@
+#http://pastebin.com/TFb7QJtD
+
+separator = ´=>
+print_movies(movies)
+#
+def print_movies(movie_list)
+  movie_list.each do |m|
+    puts "#{m.title} #{separator} #{m.rating}" # === FAILS!! ===
+  end
+end
