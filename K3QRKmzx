@@ -1,0 +1,7 @@
+#http://pastebin.com/K3QRKmzx
+
+movies.each do |m|
+  puts "#{m.title} is rated #{m.rating}"
+end
+
+
