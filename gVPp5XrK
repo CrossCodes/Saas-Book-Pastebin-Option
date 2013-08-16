@@ -1,0 +1,22 @@
+#http://pastebin.com/gVPp5XrK
+
+<person type="faculty">
+  <name>Barbara Liskov</name>
+  <contact>
+    <phone location="office">617-253-2008</phone>
+    <email>liskov@csail.mit.edu</email>
+  </contact>
+</person>
+
+# Code that generates the above markup:
+
+require ´builder´
+b = Builder::XmlMarkup.new(:indent => 2)
+b.person :type => ´faculty´ do
+  b.name "Barbara Liskov"
+  b.contact do
+    b.phone "617-253-2008", :location => ´office´
+    b.email "liskov@csail.mit.edu"
+  end
+end
+
