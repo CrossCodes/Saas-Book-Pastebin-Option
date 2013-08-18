@@ -1,0 +1,6 @@
+#http://pastebin.com/4zkRbaPT
+
+Feature: Add a movie to Rotten Potatoes
+  As a movie fan
+  So that I can share a movie with other movie fans
+  I want to add a movie to Rotten Potatoes database
