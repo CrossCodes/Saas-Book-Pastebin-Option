@@ -1,0 +1,4 @@
+#http://pastebin.com/PbFnAGt1
+
+claas Movie < ActiveRecord::Base
+end
