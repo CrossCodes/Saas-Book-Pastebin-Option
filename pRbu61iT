@@ -1,0 +1,7 @@
+#http://pastebin.com/pRbu61iT
+
+Feature: Rotten Potatoes should have good response time (unmeasurable)
+Feature: When adding a movie, 99% af Add Movie pages
+         should appear within 3 seconds (measurable)
+         
+    
