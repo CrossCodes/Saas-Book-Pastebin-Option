@@ -1,0 +1,15 @@
+#http://pastebin.com/0JBj79Dh
+
+class EmailList
+  attr_reader :mailer
+  delegate :send_email, :to => :mailer
+  def initialize(mailer_type)
+    @mailer = mailer_type.new
+  end
+end
+# in RottenPotatoes EmailListController:
+def advertise_discount_for_movie
+    moviegoers = Moviegoer.interested_in params[:movie_id]
+    mailer = if Config.has_amiko? then Amiko else MailerMonkey end
+    EmailList.new(mailer).send_email_to moviegoers
+end
