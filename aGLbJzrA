@@ -1,0 +1,24 @@
+#http://pastebin.com/aGLbJzrA
+
+class Rectangle
+ attr_accessor :width, :height, :top_left_corner
+ def new(width,height,top_left) ... ; end
+ def area ... ; end
+ def perimeter ... ; end
+end
+# A square is just a special case of rectangle...right?
+class Square < Rectangle
+ # ooops...a square has to have width and height equal
+ attr_reader :width, :height, :side
+ def width=(w)  ; @width = @height = w ; end
+ def height=(w) ; @width = @height = w ; end
+ def side=(w)   ; @width = @height = w ; end
+end
+# But is a Square really a kind of Rectangle?
+class Rectangle
+ def make_twice_as_wide_as_high(dim)
+   self.width = 2*dim
+   self.height = dim           # doesn’t work!
+ end
+end
+
