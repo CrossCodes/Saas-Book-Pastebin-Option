@@ -1,0 +1,15 @@
+#http://pastebin.com/xghNdUW0
+
+# reopen Mailer class and decorate its send_email method.
+class Mailer
+ alias_method_chain :send_email, :cc
+ def send_email_with_cc(recipient,body) # this is our new method
+   send_email_without_cc(recipient,body) # will call original method
+   copy_sender(body)
+ end
+end
+# now we have two methods:
+send_email(...)            # calls send_email_with_cc
+send_email_with_cc(...)    # same thing
+send_email_without_cc(...) # call (renamed) original method
+
