@@ -1,0 +1,17 @@
+#http://pastebin.com/2gZCgrYz
+
+# LSP-compliant solution: replace inheritance with delegation
+# Ruby’s duck typing still lets you use a square in most places where
+#  rectangle would be used - but no longer a subclass in LSP sense.
+class Square
+ attr_accessor :rect
+ def initialize(side, top_left)
+   @rect = Rectangle.new(side, side, top_left)
+ end
+ def area      ; rect.area      ; end
+ def perimeter ; rect.perimeter ; end
+ # A more concise way to delegate, if using ActiveSupport (see text):
+ #  delegate :area, :perimeter, :to => :rect
+ def side=(s) ; rect.width = rect.height = s ; end
+end
+
