@@ -1,0 +1,15 @@
+#http://pastebin.com/5zbPHjMq
+
+class EmailList
+  attr_reader :mailer
+  delegate :send_email, :to => :mailer
+  def initialize
+    @mailer = MailerMonkey.new
+  end
+end
+# in RottenPotatoes EmailListController:
+def advertise_discount_for_movie
+  moviegoers = Moviegoer.interested_in params[:movie_id]
+  EmailList.new.send_email_to moviegoers
+end
+
