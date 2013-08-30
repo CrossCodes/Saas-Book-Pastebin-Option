@@ -1,0 +1,29 @@
+#http: / /pastebin.com/ siYYms6T
+
+class PdfFormatter
+ def initialize ; ... ; end
+ def output ; ... ; end
+end
+class PdfWithPasswordFormatter < PdfFormatter
+ def initialize(base) ; @base = base ; end
+ def protect_with_password ; ... ; end
+ def output
+   @base.output.protect_with_password
+ end
+end
+class PdfWithWatermarkFormatter < PdfFormatter
+ def initialize(base) ; @base = base ; end
+ def add_watermark ; ... ; end
+ def output
+   @base.output.protect_with_password
+ end
+end
+# If we just want a plain PDF
+formatter = PdfFormatter.new
+# If we want a "draft" watermark
+formatter = PdfWithWatermarkFormatter.new(PdfFormatter.new)
+# Both password protection and watermark
+formatter = PdfWithWatermarkFormatter.new(
+ PdfWithPasswordFormatter.new(PdfFormatter.new))
+  
+  
