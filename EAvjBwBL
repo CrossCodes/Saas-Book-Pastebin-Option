@@ -1,0 +1,16 @@
+#http://pastebin.com/EAvjBwBL
+
+class AmikoAdapter
+  def initialize ; @amiko = Amiko.new(...) ; end
+  def send_email
+    @amiko.authenticate(...)
+    @amiko.send_message(...)
+  end
+end
+# Change the controller method to use the adapter:
+def advertise_discount_for_movie
+  moviegoers = Moviegoer.interested_in params[:movie_id]
+  mailer = if Config.has_amiko? then AmikoAdapter else MailerMonkey end
+  EmailList.new(mailer).send_email_to moviegoers
+end
+
