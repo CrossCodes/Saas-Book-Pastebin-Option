@@ -1,0 +1,18 @@
+# http://pastebin.com/Ge131bKB
+
+class Config
+ def self.emailer
+   if email_disabled? then NullMailer else
+     if has_amiko? then AmikoAdapter else MailerMonkey end
+   end
+ end
+end
+class NullMailer
+ def initialize ; end
+ def send_email ; true ; end
+end
+def advertise_discount_for_movie
+ moviegoers = Moviegoer.interested_in(params[:movie_id])
+ EmailList.new(Config.emailer).send_email_to(moviegoers)
+ end
+end
