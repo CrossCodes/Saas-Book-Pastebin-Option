@@ -1,0 +1,13 @@
+# http://pastebin.com/wmTcSJFy
+
+class Config
+  def self.email_enabled? ; ... ; end
+  def self.emailer ; if has_amiko? then Amiko else MailerMonkey end ; end
+end
+def advertise_discount_for_movie
+  if Config.email_enabled?
+    moviegoers = Moviegoer.interested_in(params[:movie_id])
+    EmailList.new(Config.emailer).send_email_to(moviegoers)
+  end
+end
+
